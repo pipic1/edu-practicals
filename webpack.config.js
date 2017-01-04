@@ -13,7 +13,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname)+"/build",
-        filename: 'bundle.js'
+        filename: 'bundle.js' //GENERATION DU JS
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
@@ -21,7 +21,7 @@ module.exports = {
             'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
         }),
         new HtmlWebpackPlugin({
-            template: path.join(__dirname)+'/index.ejs'
+            template: path.join(__dirname)+'/index.ejs',title:"MonTitre"
         })
     ],
     module: {
